@@ -1,86 +1,72 @@
-# 📊 Content Personalization System
+# 🎓 Academic Record Management System
 
-## 📌 Project Overview
+📌 **Project Overview**
 
-This project explores how **user behavior data** can be analyzed to design a **content personalization system** similar to YouTube’s recommendation engine. The focus is on **data preprocessing, exploratory analysis, and evaluation of recommendation patterns**, showing how structured insights can improve user engagement.
+This project demonstrates how academic data can be efficiently managed using **SQL database design and advanced querying techniques**. The system models entities like students, instructors, departments, and academic activity, while also implementing **views, stored procedures, and triggers** for realistic database functionality.
 
-Instead of only highlighting algorithms, this project demonstrates the **data analysis process** behind building recommendation systems.
+Instead of focusing only on schema creation, this project highlights the **practical SQL skills** required to manage and analyze academic records.
 
 ---
 
 ## 📂 Repository Contents
 
-* `Content_Personalization_System.ipynb` → Notebook with data preprocessing, exploratory data analysis (EDA), and recommendation generation
-* `Content_Personalization_System_Report.pdf` → Report summarizing workflow, insights, and outcomes
+* **Academic_Record_Management_System_ERD.sql** → Schema definition for the database (Users, Books, Downloads as practice schema)
+* **Academic_Record_Management_System.sql** → Collection of SQL queries, advanced operations, and constraints (students, instructors, departments)
 
 ---
 
-## 🔄 Data Analysis Workflow
+## 🔄 Database Workflow
 
-1. **Data Preprocessing**
+### **Database Setup**
 
-   * Cleaning and formatting user–video interaction data
-   * Handling missing values and sparsity in the dataset
-   * Feature engineering for user activity and video metadata
+* Creation of relational schema (`Users`, `Books`, `Downloads`)
+* Primary keys, foreign keys, and indexing for performance
 
-2. **Exploratory Data Analysis (EDA)**
+### **Essential Queries**
 
-   * Distribution of user activity levels (active vs. casual users)
-   * Most popular content categories
-   * Long-tail effect: analyzing niche vs. trending content
-   * Correlation between user engagement and content attributes
+* Retrieve student full names (A–K last names)
+* List instructors hired in a given year
+* Calculate months attended by each student
+* Identify top 20% highest-paid instructors
+* Find active (non-graduated) students
 
-3. **Recommendation Insights**
+### **Advanced SQL Features**
 
-   * Collaborative Filtering → Finds users with similar behavior
-   * Content-Based Filtering → Leverages video attributes for similarity
-   * Hybrid Analysis → Combines behavioral and content features
-
-4. **Evaluation**
-
-   * Precision@K & Recall@K to assess relevance of recommendations
-   * Coverage and diversity of recommendations
-   * Visualization of recommendation distribution across users/items
+* **View**: `DepartmentInstructors` → maps instructors to their departments
+* **Stored Procedure**: `spInsertDepartment` → safely inserts new departments
+* **Trigger**: Enforces salary rules (valid range & adjustments)
 
 ---
 
-## 📊 Key Performance Indicators (KPIs)
+## 📊 Key Learning Outcomes
 
-* **Data KPIs**
+### **Database KPIs**
 
-  * Number of users, items, and interactions analyzed
-  * Activity distribution (how many users consume most content)
-  * Popular vs. niche content breakdown
+* Well-structured ERD with normalized relations
+* Indexed queries for faster lookups
+* Use of DDL (schema) + DML (queries) in tandem
 
-* **Recommendation KPIs**
+### **Advanced SQL KPIs**
 
-  * Precision@K → % of recommended items that were relevant
-  * Recall@K → % of relevant items captured in recommendations
-  * Coverage → % of catalog that can be recommended
-  * Diversity → Spread of recommendations beyond most popular items
+* Data integrity maintained via triggers
+* Scalability through stored procedures
+* Query optimization using indexes
 
 ---
 
 ## 📈 Applications
 
-* **Video platforms** → Identifying which genres or categories drive engagement
-* **E-commerce** → Analyzing purchase patterns for personalized product suggestions
-* **News & Media** → Understanding reader interests for article targeting
-* **Education** → Discovering learning preferences for course recommendations
+* 🎓 **Universities** → Manage students, instructors, and courses
+* 🏫 **Colleges** → Track enrollments and faculty details
+* 📚 **Libraries** → Adapt schema for book-user interactions
+* 🏢 **Corporate Training** → Record training sessions, instructors, and learners
 
 ---
 
-## 🛠️ Tools & Libraries
+## 🛠️ Tools & Technologies
 
-* **Python** → Core language for analysis
-* **Pandas / NumPy** → Data cleaning and transformation
-* **Matplotlib / Seaborn** → Data visualization and trend analysis
-* **Scikit-learn** → Recommendation evaluation metrics
----
-
-## 👥 Author
-
-Developed by **Brinda Upendra Kumar**
+* **SQL Server / Azure SQL Database** → Execution environment
+* **T-SQL** → Querying, procedures, and triggers
+* **ERD Design** → Database normalization and schema modeling
 
 ---
-
